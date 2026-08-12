@@ -20,9 +20,7 @@ const entries = [
         transform: 0.5
       },
       audio: {
-        src: "/audio/amy.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/amy.mp3"
       }
     },
     {
@@ -46,9 +44,7 @@ const entries = [
         transform: 1.75
       },
       audio: {
-        src: "/audio/angie.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/angie.mp3"
       }
     },
     {
@@ -72,9 +68,7 @@ const entries = [
         transform: 1.75
       },
       audio: {
-        src: "/audio/anna.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/anna.mp3"
       }
     },
     {
@@ -98,9 +92,7 @@ const entries = [
         transform: 0.75
       },
       audio: {
-        src: "/audio/april.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/april.mp3"
       }
     },
     {
@@ -124,9 +116,7 @@ const entries = [
         transform: 0
       },
       audio: {
-        src: "/audio/helena.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/helena.mp3"
       }
     },
     {
@@ -150,9 +140,7 @@ const entries = [
         transform: 0.75
       },
       audio: {
-        src: "/audio/jianna.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/jianna.mp3"
       }
     },
     {
@@ -176,9 +164,7 @@ const entries = [
         transform: 1.5
       },
       audio: {
-        src: "/audio/leah.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/leah.mp3"
       }
     },
     {
@@ -202,9 +188,7 @@ const entries = [
         transform: 0.5
       },
       audio: {
-        src: "/audio/lisa.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/lisa.mp3"
       }
     },
     {
@@ -228,9 +212,7 @@ const entries = [
         transform: 0.5
       },
       audio: {
-        src: "/audio/liz.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/liz.mp3"
       }
     },
     {
@@ -254,9 +236,7 @@ const entries = [
         transform: 1.75
       },
       audio: {
-        src: "/audio/liza.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/liza.mp3"
       }
     },
     {
@@ -280,9 +260,7 @@ const entries = [
         transform: -.5
       },
       audio: {
-        src: "/audio/meg-laurel.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/meg-laurel.mp3"
       }
     },
     {
@@ -306,9 +284,7 @@ const entries = [
         transform: 0.5
       },
       audio: {
-        src: "/audio/nicci.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/nicci.mp3"
       }
     },
     {
@@ -332,9 +308,7 @@ const entries = [
         transform: 0
       },
       audio: {
-        src: "/audio/sarah.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/sarah.mp3"
       }
     },
     {
@@ -358,9 +332,7 @@ const entries = [
         transform: 0.75
       },
       audio: {
-        src: "/audio/vyanka.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/vyanka.mp3"
       }
     },
     {
@@ -384,9 +356,7 @@ const entries = [
         transform: 1
       },
       audio: {
-        src: "/audio/yoyo.mp3",
-        loop: true,
-        layerable: true
+        src: "/audio/yoyo.mp3"
       }
     }
   ];
