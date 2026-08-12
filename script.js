@@ -47,6 +47,20 @@ async function createVessel(entry) {
     shape.appendChild(label);
 
     table.appendChild(shape);
+
+    //optional?? respective rows popping up when highlighted
+    const row = document.querySelector(`.toc-entry[data-id="${entry.id}"]`)
+    shape.addEventListener('mouseenter', function() {
+        row.classList.add('highlighted');
+        row.style.paddingBottom = 'calc(4.3rem + 100px)';
+        row.style.marginBottom = '-100px'
+    })
+    shape.addEventListener('mouseleave', function() {
+        row.classList.remove('highlighted');
+        row.style.paddingBottom = '';
+        row.style.marginBottom = '';
+    })
+
     return shape;
 }
 
@@ -78,6 +92,8 @@ function createRow(entry, index){
     row.addEventListener('click', function() {
         openText(entry);
     });
+
+    //combined with .toc-entry:hover in style.css
 
     row.addEventListener('mouseenter', function() {
         row.style.paddingBottom = 'calc(4.3rem + 100px)';

@@ -143,7 +143,7 @@ body {
     margin-top: 0;
 }
 
-.toc-entry:hover {
+.toc-entry:hover, .toc-entry.highlighted {
     width: calc(100% + 10px);
     transform: rotate(var(--toc-tilt, 0deg)) translateX(var(--toc-translate, 0)) translateY(-20px);
 }
