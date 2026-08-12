@@ -9,7 +9,10 @@ body {
     grid-template-columns: 1fr 4rem 1fr;
     grid-template-rows: 1fr;
     overflow: hidden;
+    font-family: 'EB Garamond', 'Times', 'Times New Roman', serif;
 }
+
+/* vessel section */
 
 #vessel-table {
     position: relative;
@@ -88,6 +91,8 @@ body {
     opacity: 1;
 }
 
+/* spine */
+
 #spine {
     background: #f1f1f1;
     writing-mode: vertical-rl;
@@ -96,7 +101,13 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+
+    font-size: 1.4em;
+    font-style: italic;
+    letter-spacing: -1px;
 }
+
+/* table of contents */
 
 #toc {
     overflow: hidden;
@@ -120,10 +131,12 @@ body {
     cursor: pointer;
     transform: rotate(var(--toc-tilt, 0deg)) translateX(var(--toc-translate, 0));
     transform-origin: left center;
+
     font: inherit;
-    font-size: 28px;
+    font-size: 1.6rem;
     font-style: italic;
     min-height: min-content;
+    white-space: normal;
 }
 
 .toc-entry:first-child{
@@ -134,6 +147,8 @@ body {
     width: calc(100% + 10px);
     transform: rotate(var(--toc-tilt, 0deg)) translateX(var(--toc-translate, 0)) translateY(-20px);
 }
+
+/* text panels */
 
 .panel-overlay {
     position: fixed;

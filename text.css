@@ -1,0 +1,10 @@
+h2 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.8rem;
+}
+
+.text-body {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+}
