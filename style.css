@@ -138,6 +138,9 @@ body {
     font-style: italic;
     min-height: min-content;
     white-space: normal;
+
+    color: #000;
+
 }
 
 .toc-entry:first-child{
@@ -151,6 +154,10 @@ body {
 .toc-entry:hover, .toc-entry.highlighted {
     width: calc(100% + 10px);
     transform: rotate(var(--toc-tilt, 0deg)) translateX(var(--toc-translate, 0)) translateY(-20px);
+}
+
+.vessel-icon {
+    display: none;
 }
 
 /* text panels */
@@ -200,4 +207,85 @@ body {
 
 .close-button:hover{
     transform: translateY(-4px);
+}
+
+/* responsive stuff */
+@media all and (max-width: 768px) {
+    html, body {
+        height: auto;
+        min-height: 100dvh;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    body.panel-open {
+        overflow: hidden;
+        touch-action: none;
+    }
+
+    body.panel-open #toc, body.panel-open #spine {
+        pointer-events: none;
+    }
+
+    #spine {
+        writing-mode: horizontal-tb;
+        transform: none;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    #vessel-table {
+        display: none;
+    }
+
+    #toc {
+        width: 100dvw;
+        margin-left: 0;
+        height: auto;
+        overflow: visible;
+    }
+
+    .toc-entry {
+        margin-top: -40px;
+        width: 98%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .vessel-icon {
+        display: block;
+        flex-shrink: 1;
+    }
+
+    .vessel-icon img {
+        display: block;
+        width: 1.4em;
+        height: auto;
+    }
+
+    .entry-title {
+        text-align: left;
+    }
+
+    .panel-overlay {
+        padding-top: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .text-panel {
+        width: 100%;
+        max-width: none;
+        min-height: 100dvh;
+        margin: 0;
+        padding: 20px;
+        padding-top: 12px;
+    }
 }
