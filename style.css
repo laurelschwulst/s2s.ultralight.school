@@ -137,6 +137,9 @@ body {
     font-style: italic;
     min-height: min-content;
     white-space: normal;
+
+    color: #000;
+
 }
 
 .toc-entry:first-child{
