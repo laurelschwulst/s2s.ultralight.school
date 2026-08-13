@@ -80,8 +80,19 @@ function createRow(entry, index){
     row.classList.add('toc-entry');
     row.dataset.id = entry.id;
 
-    const title = entry.text.title;
-    row.textContent = title + ' by ' + entry.text.author;
+    const icon = document.createElement('div');
+    icon.classList.add('vessel-icon');
+
+    const img = document.createElement('img');
+    img.src = entry.vessel.outline;
+    icon.appendChild(img);
+
+    const title = document.createElement('div');
+    title.classList.add('entry-title');
+    title.textContent = entry.text.title + ' by ' + entry.text.author;
+
+    row.appendChild(icon);
+    row.appendChild(title);
 
     //css
     row.style.backgroundColor = entry.text.bgColor;
@@ -151,6 +162,7 @@ async function openText(entry){
     overlay.appendChild(panel);
 
     document.body.appendChild(overlay);
+    document.body.classList.add('panel-open');
 
     openPanel = overlay;
 }
@@ -159,5 +171,6 @@ function closeText(){
     if (openPanel) {
         openPanel.remove();
         openPanel = null;
+        document.body.classList.remove('panel-open');
     }
 }
