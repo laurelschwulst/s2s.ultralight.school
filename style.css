@@ -110,7 +110,8 @@ body {
 /* table of contents */
 
 #toc {
-    overflow: hidden;
+    /* commenting this out to experiment with fixing the transition on the editors' letter card */
+    /* overflow: hidden; */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -141,6 +142,10 @@ body {
 
 .toc-entry:first-child{
     margin-top: 0;
+}
+
+.toc-entry:first-of-type:hover {
+    transform: rotate(var(--toc-tilt, 0deg)) translateY(var(--toc-translate, 0)) translateX(-20px);
 }
 
 .toc-entry:hover, .toc-entry.highlighted {
