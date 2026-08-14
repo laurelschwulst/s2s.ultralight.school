@@ -148,6 +148,8 @@ async function openText(entryId){
     
     panel.appendChild(close);
 
+    //need to add audio player here
+
     const body = document.createElement('div');
     body.classList.add('text-body');
     body.innerHTML = await (await fetch(entry.text.body)).text();
