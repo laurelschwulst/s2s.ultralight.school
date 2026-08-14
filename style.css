@@ -112,6 +112,7 @@ body {
 #toc {
     /* commenting this out to experiment with fixing the transition on the editors' letter card */
     /* overflow: hidden; */
+    min-height: 0;
     position: relative;
     display: flex;
     flex-direction: column;
