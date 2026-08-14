@@ -127,9 +127,9 @@ body {
     width: 100%;
     border: none;
     text-align: left;
+    text-decoration: none;
     padding: 10px 12px 4.3rem 12px;
     margin-top: -57px;
-    cursor: pointer;
     transform: rotate(var(--toc-tilt, 0deg)) translateX(var(--toc-translate, 0));
     transform-origin: left center;
 
@@ -202,7 +202,6 @@ body {
     appearance: none;
     border: none;
     background: transparent;
-    cursor: pointer;
 }
 
 .close-button:hover{

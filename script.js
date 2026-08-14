@@ -75,8 +75,8 @@ t.forEach(function (entry, i) {
 })
 
 function createRow(entry, index){
-    const row = document.createElement('button');
-    row.type = 'button';
+    const row = document.createElement('a');
+    row.href = `#${entry.id}`;
     row.classList.add('toc-entry');
     row.dataset.id = entry.id;
 
@@ -100,10 +100,6 @@ function createRow(entry, index){
     row.style.setProperty('--toc-tilt', entry.text.tilt + 'deg');
     row.style.setProperty('--toc-translate', entry.text.transform + '%');
 
-    row.addEventListener('click', function() {
-        openText(entry);
-    });
-
     //combined with .toc-entry:hover in style.css
 
     row.addEventListener('mouseenter', function() {
@@ -120,9 +116,10 @@ function createRow(entry, index){
 
 }
 
-async function openText(entry){
+async function openText(entryId){
     closeText();
 
+    const entry = entries.find(({id}) => id === entryId)
     const overlay = document.createElement('div');
     overlay.classList.add('panel-overlay');
 
@@ -140,8 +137,8 @@ async function openText(entry){
     header.appendChild(heading);
 
     //x out
-    const close = document.createElement('button');
-    close.type = 'button';
+    const close = document.createElement('a');
+    close.href = '#';
     close.classList.add('close-button');
     close.setAttribute('aria-label', 'Close');
 
@@ -149,7 +146,6 @@ async function openText(entry){
     icon.src = '/x.svg';
     close.appendChild(icon);
     
-    close.addEventListener('click', closeText);
     panel.appendChild(close);
 
     const body = document.createElement('div');
@@ -173,4 +169,15 @@ function closeText(){
         openPanel = null;
         document.body.classList.remove('panel-open');
     }
+}
+
+addEventListener("hashchange", toggle)
+
+ addEventListener("load", toggle)
+
+function toggle() {
+    const match = document.URL.match(/#(.*)/)
+    const entryId = match && match[1];
+    if (entryId) openText(entryId);
+    else closeText();
 }
