@@ -9,6 +9,17 @@ h2 {
     line-height: 1.7rem;
 }
 
+.bio {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    font-style: italic;
+    padding-top: 3rem;
+}
+
+.bio em {
+    font-style:normal;
+}
+
 #js {
     text-align: center;
 }
