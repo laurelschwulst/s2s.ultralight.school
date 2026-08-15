@@ -207,6 +207,12 @@ body {
     background: transparent;
 }
 
+.close-button img {
+    width: 23px;
+    height: 22px;
+    display: block;
+}
+
 .close-button:hover{
     transform: translateY(-4px);
 }
