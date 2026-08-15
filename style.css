@@ -109,6 +109,13 @@ body {
     letter-spacing: -1px;
 }
 
+#logo img {
+    width: 50px;
+    height: auto;
+    display: block;
+    transform: rotate(180deg);
+}
+
 /* table of contents */
 
 #toc {
@@ -245,6 +252,18 @@ body {
         width: 100%;
         box-sizing: border-box;
         padding: 10px;
+        padding-bottom: 20px;
+        align-items: flex-end;
+    }
+
+    #class-title {
+        display: none;
+    }
+
+    #logo img {
+        width: 80px;
+        height: auto;
+        transform: rotate(0deg);
     }
 
     #vessel-table {
