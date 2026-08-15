@@ -7,7 +7,7 @@ const entries = [
         fill: "/vessels/fill/Amy.svg",
         x: 22, y: 13,
         width: 38,
-        fillColor: "#5BA8A0",
+        fillColor: "#A7C2D5",
         tilt: -10
       },
       text: {
@@ -15,7 +15,7 @@ const entries = [
         title: "{hatched striations, the curl at the end of an unraveling thread}",
         body: "/text/amy.html",
         author: "Amy Fang",
-        bgColor: "#5BA8A0",
+        bgColor: "#A7C2D5",
         tilt: 1.25,
         transform: 0.5
       },
@@ -31,7 +31,7 @@ const entries = [
         fill: "/vessels/fill/Angie.svg",
         x: 60, y: 16,
         width: 120,
-        fillColor: "#6BA3D6",
+        fillColor: "#E07A6A",
         tilt: 12
       },
       text: {
@@ -39,7 +39,7 @@ const entries = [
         title: "Journey, through phosphenes",
         body: "/text/angie.html",
         author: "Angie Pai",
-        bgColor: "#6BA3D6",
+        bgColor: "#E07A6A",
         tilt: -2.5,
         transform: 1.75
       },
@@ -55,7 +55,7 @@ const entries = [
         fill: "/vessels/fill/Anna.svg",
         x: 63, y: 78,
         width: 76,
-        fillColor: "#E8C547",
+        fillColor: "#B1B753",
         tilt: -8
       },
       text: {
@@ -63,7 +63,7 @@ const entries = [
         title: "Thick",
         body: "/text/anna.html",
         author: "Anna Kuo",
-        bgColor: "#E8C547",
+        bgColor: "#B1B753",
         tilt: -1.25,
         transform: 1.75
       },
@@ -79,7 +79,7 @@ const entries = [
         fill: "/vessels/fill/April.svg",
         x: 47, y: 38,
         width: 68,
-        fillColor: "#C4A574",
+        fillColor: "#F3D27B",
         tilt: 9
       },
       text: {
@@ -87,7 +87,7 @@ const entries = [
         title: "Silence's Friends",
         body: "/text/april.html",
         author: "April Jung",
-        bgColor: "#C4A574",
+        bgColor: "#F3D27B",
         tilt: -0.5,
         transform: 0.75
       },
@@ -103,7 +103,7 @@ const entries = [
         fill: "/vessels/fill/Helena.svg",
         x: 15, y: 54,
         width: 150,
-        fillColor: "#E07A6A",
+        fillColor: "#B1B753",
         tilt: -14
       },
       text: {
@@ -111,7 +111,7 @@ const entries = [
         title: "The Dithering Texture of Moss",
         body: "/text/helena.html",
         author: "Helena Dong",
-        bgColor: "#E07A6A",
+        bgColor: "#B1B753",
         tilt: 1.5,
         transform: 0
       },
@@ -127,7 +127,7 @@ const entries = [
         fill: "/vessels/fill/Jianna.svg",
         x: 65, y: 48,
         width: 96,
-        fillColor: "#E8C94A",
+        fillColor: "#BEDBC9",
         tilt: 11
       },
       text: {
@@ -135,7 +135,7 @@ const entries = [
         title: "White Flower",
         body: "/text/jianna.html",
         author: "Jianna So",
-        bgColor: "#E8C94A",
+        bgColor: "#BEDBC9",
         tilt: 1.75,
         transform: 0.75
       },
@@ -151,7 +151,7 @@ const entries = [
         fill: "/vessels/fill/Leah.svg",
         x: 20, y: 32,
         width: 68,
-        fillColor: "#E8A0B0",
+        fillColor: "#BEDBC9",
         tilt: -11
       },
       text: {
@@ -159,7 +159,7 @@ const entries = [
         title: "Night/Morning",
         body: "/text/leah.html",
         author: "Leah Koransky",
-        bgColor: "#E8A0B0",
+        bgColor: "#BEDBC9",
         tilt: -1,
         transform: 1.5
       },
@@ -175,7 +175,7 @@ const entries = [
         fill: "/vessels/fill/Lisa.svg",
         x: 16, y: 68,
         width: 160,
-        fillColor: "#6B9BD1",
+        fillColor: "#F3D27B",
         tilt: 8
       },
       text: {
@@ -183,7 +183,7 @@ const entries = [
         title: "Corn Time",
         body: "/text/lisa.html",
         author: "Lisa Yoder",
-        bgColor: "#6B9BD1",
+        bgColor: "#F3D27B",
         tilt: 2.5,
         transform: 0.5
       },
@@ -199,7 +199,7 @@ const entries = [
         fill: "/vessels/fill/Liz.svg",
         x: 44, y: 68,
         width: 81,
-        fillColor: "#5BB5A8",
+        fillColor: "#A7C2D5",
         tilt: -9
       },
       text: {
@@ -207,7 +207,7 @@ const entries = [
         title: "Long Lines",
         body: "/text/liz.html",
         author: "Liz Ellis",
-        bgColor: "#5BB5A8",
+        bgColor: "#A7C2D5",
         tilt: -1.5,
         transform: 0.5
       },
@@ -223,7 +223,7 @@ const entries = [
         fill: "/vessels/fill/Liza.svg",
         x: 64, y: 24,
         width: 142,
-        fillColor: "#C9B07A",
+        fillColor: "#CEC0A3",
         tilt: 13
       },
       text: {
@@ -231,7 +231,7 @@ const entries = [
         title: "bird score",
         body: "/text/liza.html",
         author: "Liza Pittard",
-        bgColor: "#C9B07A",
+        bgColor: "#CEC0A3",
         tilt: 2,
         transform: 1.75
       },
@@ -247,7 +247,7 @@ const entries = [
         fill: "/vessels/fill/editors.svg",
         x: 35, y: 26,
         width: 130,
-        fillColor: "#A8C5A0",
+        fillColor: "#FFFFF2",
         tilt: -7
       },
       text: {
@@ -255,7 +255,7 @@ const entries = [
         title: "Letter from the Editors",
         body: "/text/editors.html",
         author: "Meg Miller & Laurel Schwulst",
-        bgColor: "#A8C5A0",
+        bgColor: "#FFFFF2",
         tilt: 0,
         transform: -.5
       },
@@ -271,7 +271,7 @@ const entries = [
         fill: "/vessels/fill/Nicci.svg",
         x: 36, y: 47,
         width: 102,
-        fillColor: "#6B9FD6",
+        fillColor: "#CEC0A3",
         tilt: 10
       },
       text: {
@@ -279,7 +279,7 @@ const entries = [
         title: "My Body is a State Machine",
         body: "/text/nicci.html",
         author: "Nicci Yin",
-        bgColor: "#6B9FD6",
+        bgColor: "#CEC0A3",
         tilt: -1.5,
         transform: 0.5
       },
@@ -295,7 +295,7 @@ const entries = [
         fill: "/vessels/fill/Sarah.svg",
         x: 70, y: 66,
         width: 114,
-        fillColor: "#E8A0B8",
+        fillColor: "#E07A6A",
         tilt: -12
       },
       text: {
@@ -303,7 +303,7 @@ const entries = [
         title: "Untitled perfume review",
         body: "/text/sarah.html",
         author: "Sarah Chefka",
-        bgColor: "#E8A0B8",
+        bgColor: "#E07A6A",
         tilt: 0.5,
         transform: 0
       },
@@ -319,7 +319,7 @@ const entries = [
         fill: "/vessels/fill/Vyanka.svg",
         x: 46, y: 59,
         width: 121,
-        fillColor: "#7AB8C9",
+        fillColor: "#92B191",
         tilt: 7
       },
       text: {
@@ -327,7 +327,7 @@ const entries = [
         title: "Before Anyone Leaves",
         body: "/text/vyanka.html",
         author: "Vyanka Sotelo",
-        bgColor: "#7AB8C9",
+        bgColor: "#92B191",
         tilt: -1,
         transform: 0.75
       },
@@ -343,7 +343,7 @@ const entries = [
         fill: "/vessels/fill/YoYo.svg",
         x: 40, y: 8,
         width: 63,
-        fillColor: "#E89A5C",
+        fillColor: "#92B191",
         tilt: -15
       },
       text: {
@@ -351,7 +351,7 @@ const entries = [
         title: "you laid with me",
         body: "/text/yo-yo.html",
         author: "Yo-Yo Lin",
-        bgColor: "#E89A5C",
+        bgColor: "#92B191",
         tilt: -2.25,
         transform: 1
       },

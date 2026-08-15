@@ -10,13 +10,15 @@ body {
     grid-template-rows: 1fr;
     overflow: hidden;
     font-family: 'EB Garamond', 'Times', 'Times New Roman', serif;
+    background: #EFE5D5;
+    color: #48403D;
 }
 
 /* vessel section */
 
 #vessel-table {
     position: relative;
-    background: #fff;
+    background: transparent;
     overflow: hidden;
 }
 
@@ -57,7 +59,7 @@ body {
 }
 
 .vessel-outline svg path {
-    fill: #000;
+    fill: #48403D;
 }
 
 .vessel-fill svg path {
@@ -83,7 +85,7 @@ body {
     width: 100px;
     font-family: 'Reenie Beanie', Arial, sans-serif;
     font-size: 1.5rem;
-    color: #111;
+    color: #48403D;
     transition: opacity 0.2s ease;
 }
 
@@ -94,7 +96,7 @@ body {
 /* spine */
 
 #spine {
-    background: #f1f1f1;
+    background: transparent;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     display: flex;
@@ -120,7 +122,7 @@ body {
     margin-left: -0.25rem;
     width: calc(100% + 3.5rem);
     z-index: 1;
-    background: #f1f1f1;
+    background: transparent;
 }
 
 .toc-entry {
@@ -140,7 +142,7 @@ body {
     min-height: min-content;
     white-space: normal;
 
-    color: #000;
+    color: #48403D;
 
 }
 
@@ -252,12 +254,21 @@ body {
 
     .toc-entry {
         margin-top: -40px;
-        width: 98%;
+        width: 100%;
+        box-sizing: border-box;
+        transform: rotate(var(--toc-tilt, 0deg));
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 10px;
     }
+
+    .toc-entry:hover,
+    .toc-entry.highlighted,
+    .toc-entry:first-of-type:hover {
+        width: 100%;
+        transform: rotate(var(--toc-tilt, 0deg));
+}
 
     .vessel-icon {
         display: block;
