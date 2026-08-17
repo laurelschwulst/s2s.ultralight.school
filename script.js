@@ -52,13 +52,13 @@ async function createVessel(entry) {
     const row = document.querySelector(`.toc-entry[data-id="${entry.id}"]`)
     shape.addEventListener('mouseenter', function() {
         row.classList.add('highlighted');
-        row.style.paddingBottom = 'calc(4.3rem + 100px)';
-        row.style.marginBottom = '-100px'
+        /*row.style.paddingBottom = 'calc(4.3rem + 100px)';
+        row.style.marginBottom = '-100px'*/
     })
     shape.addEventListener('mouseleave', function() {
         row.classList.remove('highlighted');
-        row.style.paddingBottom = '';
-        row.style.marginBottom = '';
+        /*row.style.paddingBottom = '';
+        row.style.marginBottom = '';*/
     })
 
     return shape;

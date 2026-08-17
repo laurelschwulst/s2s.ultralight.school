@@ -138,10 +138,11 @@ body {
     border: none;
     text-align: left;
     text-decoration: none;
-    padding: 10px 12px 4.3rem 12px;
+    padding: 10px 12px 4rem 12px;
     margin-top: -57px;
     transform: rotate(var(--toc-tilt, 0deg)) translateX(var(--toc-translate, 0));
     transform-origin: left center;
+    flex: 1 1 auto;
 
     font: inherit;
     font-size: 1.6rem;
@@ -158,7 +159,7 @@ body {
 }
 
 .toc-entry:first-of-type:hover {
-    transform: rotate(var(--toc-tilt, 0deg)) translateY(var(--toc-translate, 0)) translateX(-20px);
+    transform: rotate(var(--toc-tilt, 0deg)) translateX(-20px);
 }
 
 .toc-entry:hover, .toc-entry.highlighted {
@@ -278,7 +279,10 @@ body {
     }
 
     .toc-entry {
+        flex: none;
         margin-top: -40px;
+        margin-bottom: 0;
+        padding-bottom: 4rem;
         width: 100%;
         box-sizing: border-box;
         transform: rotate(var(--toc-tilt, 0deg));

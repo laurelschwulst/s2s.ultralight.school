@@ -9,6 +9,18 @@ h2 {
     line-height: 1.7rem;
 }
 
+.text-body a, .text-body a:visited{
+    color: #48403D;
+    text-decoration: none;
+    border-bottom: 1px solid #48403d;
+}
+
+.text-body a:hover, .text-body a:active {
+    opacity: .7;
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
 .indent {
     display: block;
     padding-left: 2em;
@@ -19,6 +31,12 @@ h2 {
     font-style: italic;
     padding-top: 40px;
     padding-bottom: 20px
+}
+
+sup {
+    font-size: 0.75em;
+    line-height: 0;
+    vertical-align: 0.5em;
 }
 
 .bio {

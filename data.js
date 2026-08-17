@@ -112,7 +112,7 @@ const entries = [
         body: "/text/helena.html",
         author: "Helena Dong",
         bgColor: "#B1B753",
-        tilt: 1.5,
+        tilt: 1.1,
         transform: 0
       },
       audio: {
@@ -161,7 +161,7 @@ const entries = [
         author: "Leah Koransky",
         bgColor: "#BEDBC9",
         tilt: -1,
-        transform: 1.5
+        transform: 1
       },
       audio: {
         src: "/audio/leah.mp3"
@@ -254,10 +254,10 @@ const entries = [
         label: "editors",
         title: "Letter from the Editors",
         body: "/text/editors.html",
-        author: "Meg Miller & Laurel Schwulst",
+        author: "Laurel Schwulst & Meg Miller",
         bgColor: "#FFFFF2",
         tilt: 0,
-        transform: -.5
+        transform: 1.5
       },
       audio: {
         src: "/audio/meg-laurel.mp3"
