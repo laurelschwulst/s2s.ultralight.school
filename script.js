@@ -133,8 +133,7 @@ async function openText(entryId){
     header.classList.add('text-header');
 
     const heading = document.createElement('h2');
-    const title = entry.text.title;
-    heading.textContent = title + ' by ' + entry.text.author;
+    heading.textContent = entry.text.title;
     header.appendChild(heading);
 
     const byline = document.createElement('h3');
