@@ -14,6 +14,19 @@ body {
     color: #48403D;
 }
 
+#logo-desktop {
+    top: 30px;
+    left: 30px;
+    position: fixed;
+    z-index: 10;
+    display: block;
+}
+
+#logo-desktop img {
+    width: 60px;
+    height: auto;
+}
+
 /* vessel section */
 
 #vessel-table {
@@ -109,11 +122,8 @@ body {
     letter-spacing: -1px;
 }
 
-#logo img {
-    width: 50px;
-    height: auto;
-    display: block;
-    transform: rotate(180deg);
+#logo-mobile {
+    display: none;
 }
 
 /* table of contents */
@@ -181,6 +191,7 @@ body {
     align-items: center;
     justify-content: center;
     padding-top: 100px;
+    padding-bottom: 100px;
     overflow-y: auto;
     box-sizing: border-box;
 }
@@ -196,6 +207,8 @@ body {
     padding: 80px;
     box-sizing: border-box;
     position: relative;
+    transform: rotate(var(--toc-tilt, 0deg));
+    transform-origin: center center;
 }
 
 .text-body {
@@ -261,7 +274,15 @@ body {
         display: none;
     }
 
-    #logo img {
+    #logo-desktop {
+        display: none;
+    }
+
+    #logo-mobile {
+        display: block;
+    }
+
+    #logo-mobile img {
         width: 80px;
         height: auto;
         transform: rotate(0deg);
@@ -316,6 +337,7 @@ body {
 
     .panel-overlay {
         padding-top: 0;
+        padding-bottom: 0;
         align-items: flex-start;
         justify-content: flex-start;
     }
@@ -327,6 +349,7 @@ body {
         margin: 0;
         padding: 20px;
         padding-top: 12px;
+        transform: none;
     }
 
     .text-header {
@@ -336,6 +359,7 @@ body {
     .close-button {
         top: 30px;
         right: 30px;
+        position: fixed;
     }
 
     .bio {

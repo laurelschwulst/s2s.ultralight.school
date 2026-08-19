@@ -89,7 +89,7 @@ function createRow(entry, index){
 
     const title = document.createElement('div');
     title.classList.add('entry-title');
-    title.textContent = entry.text.title + ' by ' + entry.text.author;
+    title.textContent = entry.text.title;
 
     row.appendChild(icon);
     row.appendChild(title);
@@ -127,6 +127,7 @@ async function openText(entryId){
     panel.classList.add('text-panel');
     panel.dataset.id = entry.id;
     panel.style.backgroundColor = entry.text.bgColor;
+    panel.style.setProperty('--toc-tilt', entry.text.tilt + 'deg');
 
     const header = document.createElement('div');
     header.classList.add('text-header');
@@ -161,6 +162,13 @@ async function openText(entryId){
 
     document.body.appendChild(overlay);
     document.body.classList.add('panel-open');
+
+    if (window.matchMedia('(min-width:769px)').matches){
+        overlay.addEventListener('click', function(e){
+            if (e.target !== overlay) return;
+            location.hash = '';
+        });
+    }
 
     openPanel = overlay;
 }
