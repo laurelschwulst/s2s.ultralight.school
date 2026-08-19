@@ -5,7 +5,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Amy.svg",
         fill: "/vessels/fill/Amy.svg",
-        x: 22, y: 13,
+        x: 24, y: 13,
         width: 38,
         fillColor: "#A7C2D5",
         tilt: -10
@@ -29,7 +29,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Angie.svg",
         fill: "/vessels/fill/Angie.svg",
-        x: 60, y: 16,
+        x: 62, y: 16,
         width: 120,
         fillColor: "#E07A6A",
         tilt: 12
@@ -53,7 +53,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Anna.svg",
         fill: "/vessels/fill/Anna.svg",
-        x: 63, y: 78,
+        x: 65, y: 78,
         width: 76,
         fillColor: "#B1B753",
         tilt: -8
@@ -77,7 +77,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/April.svg",
         fill: "/vessels/fill/April.svg",
-        x: 47, y: 38,
+        x: 49, y: 38,
         width: 68,
         fillColor: "#F3D27B",
         tilt: 9
@@ -101,7 +101,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Helena.svg",
         fill: "/vessels/fill/Helena.svg",
-        x: 15, y: 54,
+        x: 17, y: 54,
         width: 150,
         fillColor: "#B1B753",
         tilt: -14
@@ -125,7 +125,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Jianna.svg",
         fill: "/vessels/fill/Jianna.svg",
-        x: 65, y: 48,
+        x: 67, y: 48,
         width: 96,
         fillColor: "#BEDBC9",
         tilt: 11
@@ -149,7 +149,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Leah.svg",
         fill: "/vessels/fill/Leah.svg",
-        x: 20, y: 32,
+        x: 22, y: 32,
         width: 68,
         fillColor: "#BEDBC9",
         tilt: -11
@@ -173,7 +173,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Lisa.svg",
         fill: "/vessels/fill/Lisa.svg",
-        x: 16, y: 68,
+        x: 18, y: 68,
         width: 160,
         fillColor: "#F3D27B",
         tilt: 8
@@ -197,7 +197,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Liz.svg",
         fill: "/vessels/fill/Liz.svg",
-        x: 44, y: 68,
+        x: 46, y: 68,
         width: 81,
         fillColor: "#A7C2D5",
         tilt: -9
@@ -221,7 +221,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Liza.svg",
         fill: "/vessels/fill/Liza.svg",
-        x: 64, y: 24,
+        x: 66, y: 24,
         width: 142,
         fillColor: "#CEC0A3",
         tilt: 13
@@ -245,7 +245,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/editors.svg",
         fill: "/vessels/fill/editors.svg",
-        x: 35, y: 26,
+        x: 37, y: 26,
         width: 130,
         fillColor: "#FFFFF2",
         tilt: -7
@@ -269,7 +269,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Nicci.svg",
         fill: "/vessels/fill/Nicci.svg",
-        x: 36, y: 47,
+        x: 38, y: 47,
         width: 102,
         fillColor: "#CEC0A3",
         tilt: 10
@@ -293,7 +293,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Sarah.svg",
         fill: "/vessels/fill/Sarah.svg",
-        x: 70, y: 66,
+        x: 72, y: 66,
         width: 114,
         fillColor: "#E07A6A",
         tilt: -12
@@ -317,7 +317,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Vyanka.svg",
         fill: "/vessels/fill/Vyanka.svg",
-        x: 46, y: 59,
+        x: 48, y: 59,
         width: 121,
         fillColor: "#92B191",
         tilt: 7
@@ -341,7 +341,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/YoYo.svg",
         fill: "/vessels/fill/YoYo.svg",
-        x: 40, y: 8,
+        x: 42, y: 8,
         width: 63,
         fillColor: "#92B191",
         tilt: -15
