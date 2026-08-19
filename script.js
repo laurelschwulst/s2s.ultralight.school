@@ -137,6 +137,10 @@ async function openText(entryId){
     heading.textContent = title + ' by ' + entry.text.author;
     header.appendChild(heading);
 
+    const byline = document.createElement('h3');
+    byline.textContent = entry.text.author;
+    header.appendChild(byline);
+
     //x out
     const close = document.createElement('a');
     close.href = '#';

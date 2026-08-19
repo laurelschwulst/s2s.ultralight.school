@@ -4,6 +4,11 @@ h2 {
     font-size: 1.8rem;
 }
 
+h3 {
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
 .text-body {
     font-size: 1.3rem;
     line-height: 1.7rem;
