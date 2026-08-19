@@ -252,7 +252,7 @@ const entries = [
       },
       text: {
         label: "editors",
-        title: "Letter from the Editors",
+        title: "Editors' Letter",
         body: "/text/editors.html",
         author: "Laurel Schwulst & Meg Miller",
         bgColor: "#FFFFF2",
