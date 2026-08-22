@@ -17,7 +17,8 @@ const entries = [
         author: "Amy Fang",
         bgColor: "#A7C2D5",
         tilt: 1.25,
-        transform: 0.5
+        transform: 0.5,
+        image: "/images/amy.jpg"
       },
       audio: {
         src: "/audio/amy.mp3"
@@ -41,7 +42,8 @@ const entries = [
         author: "Angie Pai",
         bgColor: "#E07A6A",
         tilt: -2.5,
-        transform: 1.75
+        transform: 1.75,
+        image: "/images/angie.jpg"
       },
       audio: {
         src: "/audio/angie.mp3"
@@ -65,7 +67,8 @@ const entries = [
         author: "Anna Kuo",
         bgColor: "#B1B753",
         tilt: -1.25,
-        transform: 1.75
+        transform: 1.75,
+        image: "/images/anna.jpg"
       },
       audio: {
         src: "/audio/anna.mp3"
@@ -113,7 +116,8 @@ const entries = [
         author: "Helena Dong",
         bgColor: "#B1B753",
         tilt: 1.1,
-        transform: 0
+        transform: 0,
+        image: "/images/helena.jpeg"
       },
       audio: {
         src: "/audio/helena.mp3"
@@ -137,7 +141,8 @@ const entries = [
         author: "Jianna So",
         bgColor: "#BEDBC9",
         tilt: 1.75,
-        transform: 0.75
+        transform: 0.75,
+        image: "/images/jianna.jpg"
       },
       audio: {
         src: "/audio/jianna.mp3"
@@ -161,7 +166,8 @@ const entries = [
         author: "Leah Koransky",
         bgColor: "#BEDBC9",
         tilt: -1,
-        transform: 1
+        transform: 1,
+        image: "/images/leah.jpg"
       },
       audio: {
         src: "/audio/leah.mp3"
@@ -185,7 +191,8 @@ const entries = [
         author: "Lisa Yoder",
         bgColor: "#F3D27B",
         tilt: 2.5,
-        transform: 0.5
+        transform: 0.5,
+        image: "/images/lisa.jpg"
       },
       audio: {
         src: "/audio/lisa.mp3"
@@ -233,7 +240,8 @@ const entries = [
         author: "Liza Pittard",
         bgColor: "#CEC0A3",
         tilt: 2,
-        transform: 1.75
+        transform: 1.75,
+        image: "/images/liza.jpg"
       },
       audio: {
         src: "/audio/liza.mp3"
@@ -281,7 +289,8 @@ const entries = [
         author: "Nicci Yin",
         bgColor: "#CEC0A3",
         tilt: -1.5,
-        transform: 0.5
+        transform: 0.5,
+        image: "/images/nicci.jpg"
       },
       audio: {
         src: "/audio/nicci.mp3"
@@ -305,7 +314,8 @@ const entries = [
         author: "Sarah Chefka",
         bgColor: "#E07A6A",
         tilt: 0.5,
-        transform: 0
+        transform: 0,
+        image: "/images/sarah.jpg"
       },
       audio: {
         src: "/audio/sarah.mp3"
@@ -329,7 +339,8 @@ const entries = [
         author: "Vyanka Sotelo",
         bgColor: "#92B191",
         tilt: -1,
-        transform: 0.75
+        transform: 0.75,
+        image: "/images/vyanka.jpg"
       },
       audio: {
         src: "/audio/vyanka.mp3"
@@ -353,7 +364,8 @@ const entries = [
         author: "Yo-Yo Lin",
         bgColor: "#92B191",
         tilt: -2.25,
-        transform: 1
+        transform: 1,
+        image: "/images/yo-yo.jpg"
       },
       audio: {
         src: "/audio/yoyo.mp3"
