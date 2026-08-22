@@ -11,6 +11,32 @@ entries.forEach(async function (entry) {
   });
 });
 
+//moved preloading images up here
+const loaded = new Map();
+
+entries.forEach(function(entry) {
+    if(!entry.text.image) return;
+
+    const preload = new Image();
+    const promise = new Promise(function(resolve) {
+        preload.onload = function() {
+            let orientation;
+            if (preload.naturalWidth >= preload.naturalHeight) {
+                orientation = 'landscape';
+            } else {
+                orientation = 'portrait';
+            }
+
+            resolve({
+                src: entry.text.image,
+                orientation: orientation
+            })
+        }
+    })
+    preload.src = entry.text.image;
+    loaded.set(entry.id, promise);
+})
+
 //VESSELS - loading, styles, fills, etc.
 
 async function createVessel(entry) {
@@ -159,20 +185,14 @@ async function openText(entryId){
         image.classList.add('header-image');
         panel.appendChild(image);
 
-        const preload = new Image();
-        preload.onload = function() {
-            if(preload.naturalWidth >= preload.naturalHeight){
-                image.classList.add('landscape');
-            } else {
-                image.classList.add('portrait');
-            }
-
+        loaded.get(entry.id).then(function(result){
+            image.classList.add(result.orientation);
+            
             const img = document.createElement('img');
-            img.src = entry.text.image;
-            img.alt = ''; // ADD IN ALT TEXT FIELD IN DATA JS LATER!!
+            img.src = result.src;
+            img.alt = ''; // ADD IN ALT TEXT HERE FROM DATA JS LATER
             image.appendChild(img);
-        };
-        preload.src = entry.text.image;
+        })
     }
 
     const body = document.createElement('div');
