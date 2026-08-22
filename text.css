@@ -100,3 +100,11 @@ sup {
 #js {
     text-align: center;
 }
+
+@media all and (max-width: 768px) {
+
+    .header-image.portrait {
+        width: 100%;
+    }
+
+}
