@@ -157,21 +157,22 @@ async function openText(entryId){
     if(entry.text.image){
         const image = document.createElement('div');
         image.classList.add('header-image');
-        
-        const img = document.createElement('img');
-        img.src = entry.text.image;
-        img.alt = ''; // ADD IN ALT TEXT FIELD IN DATA JS LATER!!
+        panel.appendChild(image);
 
-        img.addEventListener('load', function(){
-            if(img.naturalWidth >= img.naturalHeight){
+        const preload = new Image();
+        preload.onload = function() {
+            if(preload.naturalWidth >= preload.naturalHeight){
                 image.classList.add('landscape');
             } else {
                 image.classList.add('portrait');
             }
-        });
 
-        image.appendChild(img);
-        panel.appendChild(image);
+            const img = document.createElement('img');
+            img.src = entry.text.image;
+            img.alt = ''; // ADD IN ALT TEXT FIELD IN DATA JS LATER!!
+            image.appendChild(img);
+        };
+        preload.src = entry.text.image;
     }
 
     const body = document.createElement('div');
