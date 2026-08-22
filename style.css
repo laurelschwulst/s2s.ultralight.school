@@ -184,7 +184,7 @@ body {
     margin-top: 0;
 }
 
-.toc-entry:first-of-type:hover {
+.toc-entry:first-of-type:hover, .toc-entry:first-of-type.highlighted {
     transform: rotate(var(--toc-tilt, 0deg)) translateX(-20px);
 }
 
