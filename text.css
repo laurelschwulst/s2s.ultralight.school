@@ -105,6 +105,7 @@ sup {
 
     .header-image.portrait {
         width: 100%;
+        max-width: 100%;
     }
 
 }
