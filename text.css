@@ -1,3 +1,7 @@
+.text-panel {
+    background: var(--bgColor);
+}
+
 h2 {
     font-weight: 400;
     font-style: italic;
@@ -8,6 +12,43 @@ h2 {
 h3 {
     font-weight: 400;
     font-size: 1.3rem;
+}
+
+.header-image {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.header-image.landscape {
+    width: 100%;
+}
+
+.header-image.portrait {
+    width: 480px;
+    max-width: 50%;
+}
+
+.header-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bgColor);
+    mix-blend-mode: multiply;
+}
+
+.header-image img {
+    display: block;
+    height: auto;
+    filter: grayscale(1) contrast(1.5);
+}
+
+.header-image.landscape img {
+    width: 100%;
+}
+
+.header-image.portrait img {
+    width: 100%;
 }
 
 .text-body {

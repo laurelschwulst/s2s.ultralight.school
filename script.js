@@ -126,7 +126,8 @@ async function openText(entryId){
     const panel = document.createElement('div');
     panel.classList.add('text-panel');
     panel.dataset.id = entry.id;
-    panel.style.backgroundColor = entry.text.bgColor;
+    // panel.style.backgroundColor = entry.text.bgColor;
+    panel.style.setProperty('--bgColor', entry.text.bgColor);
     panel.style.setProperty('--toc-tilt', entry.text.tilt + 'deg');
 
     const header = document.createElement('div');
@@ -151,14 +152,32 @@ async function openText(entryId){
     close.appendChild(icon);
     
     panel.appendChild(close);
+    panel.appendChild(header);
 
-    //need to add audio player here
+    if(entry.text.image){
+        const image = document.createElement('div');
+        image.classList.add('header-image');
+        
+        const img = document.createElement('img');
+        img.src = entry.text.image;
+        img.alt = ''; // ADD IN ALT TEXT FIELD IN DATA JS LATER!!
+
+        img.addEventListener('load', function(){
+            if(img.naturalWidth >= img.naturalHeight){
+                image.classList.add('landscape');
+            } else {
+                image.classList.add('portrait');
+            }
+        });
+
+        image.appendChild(img);
+        panel.appendChild(image);
+    }
 
     const body = document.createElement('div');
     body.classList.add('text-body');
     body.innerHTML = await (await fetch(entry.text.body)).text();
     
-    panel.appendChild(header);
     panel.appendChild(body);
 
     overlay.appendChild(panel);
