@@ -134,9 +134,7 @@ body {
     opacity: 1;
 }
 
-/* spine */
-
-.play-pause-button {
+#play-pause-button {
     background: transparent;
     border: none;
     padding: 0;
@@ -144,8 +142,19 @@ body {
     font-size: 1.5rem;
     font-style: italic;
     font-family: Bookish;
-    padding-bottom: 2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    color: inherit;
+    z-index: 5;
   }
+
+#play-pause-button:hover {
+    cursor: pointer;
+  }
+
+/* spine */
 
 #spine {
     background: transparent;

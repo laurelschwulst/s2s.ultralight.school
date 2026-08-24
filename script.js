@@ -118,10 +118,7 @@ async function createVessel(entry) {
 let openPanel = null;
 
 //creating PLAY and PAUSE all button
-const button = document.createElement("button");
-button.classList.add("play-pause-button");
-
-button.innerHTML = "play all";
+const button = document.getElementById('play-pause-button');
 
 button.addEventListener('click', () => {
     const audios = document.querySelectorAll('audio');
@@ -149,8 +146,6 @@ button.addEventListener('click', () => {
       button.textContent = 'play all';
     }
   });
-
-document.body.appendChild(button);
 
 //creating TABLE OF CONTENTS
 const t = [...entries].sort((a, b) => a.order - b.order);
