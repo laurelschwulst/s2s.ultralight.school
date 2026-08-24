@@ -482,4 +482,8 @@ body {
     #purchase img {
         transform: rotate(5deg);
     }
+
+    #purchase:hover a, #purchase:hover a:active {
+        opacity: 1;
+    }
 }
