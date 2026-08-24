@@ -296,6 +296,49 @@ body {
     cursor: pointer;
 }
 
+/* buy link */
+
+#purchase {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    z-index: 8;
+}
+
+#purchase a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#purchase img {
+    width: 80px;
+    height: auto;
+    transform: rotate(-10deg);
+    text-decoration: none;
+    border-bottom: none;
+}
+
+#purchase:hover img {
+    transform: rotate(5deg);
+    cursor: pointer;
+}
+
+#purchase a, #purchase a:visited {
+    color: #48403D;
+    text-decoration: none;
+    border-bottom: 1px dashed #48403d;
+}
+
+#purchase:hover a, #purchase:hover a:active {
+    opacity: .7;
+    text-decoration: none;
+    border-bottom: none;
+    padding-bottom: 1px;
+}
+
+
 /* responsive stuff */
 @media all and (max-width: 768px) {
     html, body {
@@ -428,4 +471,8 @@ body {
         padding-bottom: 40px;
     }
 
+    #purchase {
+        left: auto;
+        right: 30px;
+    }
 }

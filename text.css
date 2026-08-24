@@ -59,7 +59,7 @@ h3 {
 .text-body a, .text-body a:visited{
     color: #48403D;
     text-decoration: none;
-    border-bottom: 1px solid #48403d;
+    border-bottom: 1px dashed #48403d;
 }
 
 .text-body a:hover, .text-body a:active {
