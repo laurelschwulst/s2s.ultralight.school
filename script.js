@@ -1,5 +1,9 @@
 const table = document.getElementById('vessel-table');
 const toc = document.getElementById('toc');
+const icons = {
+    play: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><polygon points="6,4 20,12 6,20"></polygon></svg>',
+    pause: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><rect x="5" y="4" width="5" height="16"></rect><rect x="14" y="4" width="5" height="16"></rect></svg>'
+};
 
 // adding a global synchronized audio controller
 function syncAudio(entryId) {
@@ -20,9 +24,9 @@ function syncAudio(entryId) {
         const openIcon = openPanel.querySelector(`.text-panel[data-id="${entryId}"] .panel-play-pause`);
         if(openIcon){
             if (playing) {
-                openIcon.textContent = '⏸';
+                openIcon.innerHTML = icons.pause;
             } else {
-                openIcon.textContent = '▶';
+                openIcon.innerHTML = icons.play;
             }
         }
     }
@@ -90,7 +94,7 @@ async function createVessel(entry) {
     
     const pause = document.createElement('div');
     pause.classList.add('pauseLabel');
-    pause.textContent = '⏸';
+    pause.innerHTML = icons.pause;
 
     shape.appendChild(pause);
 
@@ -252,9 +256,9 @@ async function openText(entryId){
     playPauseIcon.classList.add('panel-play-pause');
     playPauseIcon.setAttribute('aria-label', 'Play/pause audio');
     if (audio && !audio.paused) {
-        playPauseIcon.textContent = '⏸';
+        playPauseIcon.innerHTML = icons.pause;
     } else {
-        playPauseIcon.textContent = '▶';
+        playPauseIcon.innerHTML = icons.play;
     }
 
     playPauseIcon.addEventListener('click', function(e) {

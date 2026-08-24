@@ -118,6 +118,11 @@ body {
     transition: opacity 0.2s ease;
 }
 
+.vessel .pauseLabel svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .vessel:hover:not(.active) .label {
     opacity: 1;
 }
