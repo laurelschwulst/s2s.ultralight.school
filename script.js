@@ -228,15 +228,15 @@ function createRow(entry, index){
 
 //opening text panels
 
-async function openText(entryId){
+async function openText(entryId, autoplayOK = true){
     closeText();
 
     const entry = entries.find(({id}) => id === entryId)
 
     //controls hookup to audio
     const audio = document.getElementById(entry.audio.src);
-    if(audio && audio.paused) {
-        audio.play();
+    if(autoplayOK && audio && audio.paused) {
+        audio.play().catch(function(err){});
     }
 
     const overlay = document.createElement('div');
@@ -350,13 +350,17 @@ function closeText(){
     }
 }
 
-addEventListener("hashchange", toggle)
+addEventListener("hashchange", function() {
+    toggle(true);
+})
 
-addEventListener("load", toggle)
+addEventListener("load", function() {
+    toggle(false);
+})
 
-function toggle() {
+function toggle(autoplayOK) {
     const match = document.URL.match(/#(.*)/)
     const entryId = match && match[1];
-    if (entryId) openText(entryId);
+    if (entryId) openText(entryId, autoplayOK);
     else closeText();
 }
