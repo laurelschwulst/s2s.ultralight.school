@@ -338,9 +338,11 @@ function closeText(){
         if (mobile) {
             const panelId = openPanel.querySelector('.text-panel').dataset.id;
             const entry = entries.find(({id}) => id === panelId);
-            const audio = document.getElementById(entry.audio.src);
-            if(audio && !audio.paused){
-                audio.pause();
+            if(entry) {
+                const audio = document.getElementById(entry.audio.src);
+                if(audio && !audio.paused){
+                    audio.pause();
+                }
             }
         }
 
@@ -358,9 +360,63 @@ addEventListener("load", function() {
     toggle(false);
 })
 
+// separate function for colophon which doesn't open from data.js! (file is text/colophon.html)
+
+async function openColophon(){
+    closeText();
+    
+    const overlay = document.createElement('div');
+    overlay.classList.add('panel-overlay');
+
+    const panel = document.createElement('div');
+    panel.classList.add('text-panel', 'colophon');
+    panel.dataset.id = 'colophon';
+
+    const header = document.createElement('div');
+    header.classList.add('text-header');
+
+    const heading = document.createElement('h2');
+    heading.textContent = 'Colophon';
+    header.appendChild(heading);
+
+    const close = document.createElement('a');
+    close.href = '#';
+    close.classList.add('close-button');
+    close.setAttribute('aria-label', 'Close');
+
+    const icon = document.createElement('img');
+    icon.src = '/x.svg';
+    close.appendChild(icon);
+
+    panel.appendChild(close);
+    panel.appendChild(header);
+
+    const body = document.createElement('div');
+    body.classList.add('text-body', 'colophon-body');
+    body.innerHTML = await (await fetch('/text/colophon.html')).text();
+
+    panel.appendChild(body);
+    overlay.appendChild(panel);
+    document.body.appendChild(overlay);
+    document.body.classList.add('panel-open');
+
+    if (window.matchMedia('(min-width:769px)').matches){
+        overlay.addEventListener('click', function(e){
+            if (e.target !== overlay) return;
+            location.hash = '';
+        });
+    }
+    openPanel = overlay;
+}
+
 function toggle(autoplayOK) {
     const match = document.URL.match(/#(.*)/)
     const entryId = match && match[1];
-    if (entryId) openText(entryId, autoplayOK);
-    else closeText();
+    if (entryId === 'colophon'){
+        openColophon();
+    } else if (entryId) {
+        openText(entryId, autoplayOK);
+    } else {
+        closeText();
+    }
 }

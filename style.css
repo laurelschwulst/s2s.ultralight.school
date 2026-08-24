@@ -45,6 +45,10 @@ body {
     height: auto;
 }
 
+#logo-desktop:hover {
+    opacity: .7;
+}
+
 /* vessel section */
 
 #vessel-table {
@@ -333,11 +337,15 @@ body {
     border-bottom: 1px dashed #48403d;
 }
 
-#purchase:hover a, #purchase:hover a:active {
+#purchase a:hover, #purchase a:active {
     opacity: .7;
     text-decoration: none;
     border-bottom: none;
     padding-bottom: 1px;
+}
+
+#mobile-footer {
+    display: none;
 }
 
 
@@ -435,6 +443,19 @@ body {
         height: auto;
     }
 
+    .toc-entry[data-id="amy"] .vessel-icon svg {
+        width: 0.75em;
+    }
+
+    .toc-entry[data-id="yoyo"] .vessel-icon svg {
+        width: 1em;
+        padding-right: 6px;
+    }
+
+    .toc-entry[data-id="leah"] .vessel-icon svg {
+        width: 1em;
+    }
+
     .vessel-icon svg path {
         fill: #48403D;
     }
@@ -475,15 +496,40 @@ body {
     }
 
     #purchase {
-        left: auto;
-        right: 30px;
+        display: none;
     }
 
-    #purchase img {
-        transform: rotate(5deg);
+    #mobile-footer {
+        display: flex;
+        padding: 20px;
+        padding-top: 40px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
     }
 
-    #purchase:hover a, #purchase:hover a:active {
+    #footer-copy {
+        padding-bottom: 0px;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+    }
+
+    #footer-copy a, #footer-copy a:visited {
+        color: #48403D;
+        text-decoration: none;
+        border-bottom: 1px dashed #48403d;
+    }
+    
+    #footer-copy a:active {
         opacity: 1;
+        text-decoration: none;
+        border-bottom: none;
+        padding-bottom: 1px;
+    }
+
+    #purchase-mobile img {
+        width: 100px;
+        height: auto;
     }
 }
