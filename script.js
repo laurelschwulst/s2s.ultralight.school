@@ -8,6 +8,14 @@ entries.forEach(async function (entry) {
 
   vessel.addEventListener('click', function () {
     vessel.classList.toggle('active');
+
+    const audio = document.getElementById(vessel.dataset.audio);
+
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
   });
 });
 
@@ -44,7 +52,14 @@ async function createVessel(entry) {
 
     shape.classList.add('vessel');
     shape.dataset.id = entry.id;
+    shape.dataset.audio = entry.audio.src;
     
+    const pause = document.createElement('div');
+    pause.classList.add('pauseLabel');
+    pause.textContent = 'pause';
+
+    shape.appendChild(pause);
+
     // making fills + outlines
     const filled = document.createElement('div');
     filled.classList.add('vessel-fill');
@@ -56,8 +71,15 @@ async function createVessel(entry) {
     const outlineshape = await fetch(entry.vessel.outline);
     outline.innerHTML = await outlineshape.text();
 
+    const audio = document.createElement('audio');
+    audio.src = entry.audio.src;
+    audio.id = entry.audio.src;
+    audio.classList.add('audio');
+    shape.dataset.audio = entry.audio.src;
+
     shape.appendChild(filled);
     shape.appendChild(outline);
+    shape.appendChild(audio);
 
     //styles
     shape.style.left = entry.vessel.x + '%';
@@ -70,7 +92,10 @@ async function createVessel(entry) {
     const label = document.createElement('div');
     label.classList.add('label');
     label.textContent = entry.text.label;
+
     shape.appendChild(label);
+
+
 
     table.appendChild(shape);
 
@@ -91,6 +116,41 @@ async function createVessel(entry) {
 }
 
 let openPanel = null;
+
+//creating PLAY and PAUSE all button
+const button = document.createElement("button");
+button.classList.add("play-pause-button");
+
+button.innerHTML = "play all";
+
+button.addEventListener('click', () => {
+    const audios = document.querySelectorAll('audio');
+    const vessels = document.querySelectorAll('.vessel');
+
+    if (button.textContent === 'play all') {
+        audios.forEach(audio => {
+            audio.play()
+        });
+
+        vessels.forEach(vessel => {
+            // if(vessel.classList!=='active') {
+                vessel.classList.toggle('active', true);
+            // }
+        });
+      button.textContent = 'pause all';
+    } else {
+        audios.forEach(audio => {
+            audio.pause()
+        });
+
+        vessels.forEach(vessel => {
+            vessel.classList.toggle('active', false);
+        });
+      button.textContent = 'play all';
+    }
+  });
+
+document.body.appendChild(button);
 
 //creating TABLE OF CONTENTS
 const t = [...entries].sort((a, b) => a.order - b.order);
@@ -226,7 +286,7 @@ function closeText(){
 
 addEventListener("hashchange", toggle)
 
- addEventListener("load", toggle)
+addEventListener("load", toggle)
 
 function toggle() {
     const match = document.URL.match(/#(.*)/)
