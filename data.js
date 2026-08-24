@@ -154,7 +154,7 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Leah.svg",
         fill: "/vessels/fill/Leah.svg",
-        x: 24, y: 32,
+        x: 21, y: 32,
         width: 68,
         fillColor: "#BEDBC9",
         tilt: -11
