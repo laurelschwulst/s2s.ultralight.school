@@ -1,14 +1,48 @@
 const table = document.getElementById('vessel-table');
 const toc = document.getElementById('toc');
 
+// adding a global synchronized audio controller
+function syncAudio(entryId) {
+    const audio = document.getElementById(
+        entries.find(({id}) => id === entryId).audio.src
+    );
+    if (!audio) return;
+
+    const playing = !audio.paused;
+
+    const vessel = document.querySelector(`.vessel[data-id="${entryId}"]`);
+    if (vessel) {
+        vessel.classList.toggle('active', playing);
+    };
+
+    // set play/pause icon in panel
+    if (openPanel) {
+        const openIcon = openPanel.querySelector(`.text-panel[data-id="${entryId}"] .panel-play-pause`);
+        if(openIcon){
+            if (playing) {
+                openIcon.textContent = '⏸';
+            } else {
+                openIcon.textContent = '▶';
+            }
+        }
+    }
+
+    // play/pause all
+    const allAudio = document.querySelectorAll('audio');
+    const anyPlaying = [...allAudio].some(a => !a.paused);
+    if (anyPlaying) {
+        button.textContent = 'pause all';
+    } else {
+        button.textContent = 'play all';
+    }
+}
+
 // entries are in data.js!
 
 entries.forEach(async function (entry) {
   const vessel = await createVessel(entry);
 
   vessel.addEventListener('click', function () {
-    vessel.classList.toggle('active');
-
     const audio = document.getElementById(vessel.dataset.audio);
 
     if (audio.paused) {
@@ -56,7 +90,7 @@ async function createVessel(entry) {
     
     const pause = document.createElement('div');
     pause.classList.add('pauseLabel');
-    pause.textContent = 'pause';
+    pause.textContent = '⏸';
 
     shape.appendChild(pause);
 
@@ -77,6 +111,9 @@ async function createVessel(entry) {
     audio.classList.add('audio');
     shape.dataset.audio = entry.audio.src;
 
+    audio.addEventListener('play', () => syncAudio(entry.id));
+    audio.addEventListener('pause', () => syncAudio(entry.id));
+
     shape.appendChild(filled);
     shape.appendChild(outline);
     shape.appendChild(audio);
@@ -94,8 +131,6 @@ async function createVessel(entry) {
     label.textContent = entry.text.label;
 
     shape.appendChild(label);
-
-
 
     table.appendChild(shape);
 
@@ -117,33 +152,17 @@ async function createVessel(entry) {
 
 let openPanel = null;
 
-//creating PLAY and PAUSE all button
+//fetching PLAY and PAUSE all button
 const button = document.getElementById('play-pause-button');
 
 button.addEventListener('click', () => {
     const audios = document.querySelectorAll('audio');
-    const vessels = document.querySelectorAll('.vessel');
+    const anyPlaying = [...audios].some(audio => !audio.paused);
 
-    if (button.textContent === 'play all') {
-        audios.forEach(audio => {
-            audio.play()
-        });
-
-        vessels.forEach(vessel => {
-            // if(vessel.classList!=='active') {
-                vessel.classList.toggle('active', true);
-            // }
-        });
-      button.textContent = 'pause all';
+    if(anyPlaying) {
+        audios.forEach(audio => audio.pause());
     } else {
-        audios.forEach(audio => {
-            audio.pause()
-        });
-
-        vessels.forEach(vessel => {
-            vessel.classList.toggle('active', false);
-        });
-      button.textContent = 'play all';
+        audios.forEach(audio => audio.play());
     }
   });
 
@@ -164,9 +183,15 @@ function createRow(entry, index){
     const icon = document.createElement('div');
     icon.classList.add('vessel-icon');
 
-    const img = document.createElement('img');
+    fetch(entry.vessel.outline)
+        .then(response => response.text())
+        .then(svgText => {
+            icon.innerHTML = svgText;
+        });
+
+    /*const img = document.createElement('img');
     img.src = entry.vessel.outline;
-    icon.appendChild(img);
+    icon.appendChild(img);*/
 
     const title = document.createElement('div');
     title.classList.add('entry-title');
@@ -197,10 +222,19 @@ function createRow(entry, index){
 
 }
 
+//opening text panels
+
 async function openText(entryId){
     closeText();
 
     const entry = entries.find(({id}) => id === entryId)
+
+    //controls hookup to audio
+    const audio = document.getElementById(entry.audio.src);
+    if(audio && audio.paused) {
+        audio.play();
+    }
+
     const overlay = document.createElement('div');
     overlay.classList.add('panel-overlay');
 
@@ -213,6 +247,27 @@ async function openText(entryId){
 
     const header = document.createElement('div');
     header.classList.add('text-header');
+
+    const playPauseIcon = document.createElement('button');
+    playPauseIcon.classList.add('panel-play-pause');
+    playPauseIcon.setAttribute('aria-label', 'Play/pause audio');
+    if (audio && !audio.paused) {
+        playPauseIcon.textContent = '⏸';
+    } else {
+        playPauseIcon.textContent = '▶';
+    }
+
+    playPauseIcon.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (!audio) return;
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    header.appendChild(playPauseIcon);
 
     const heading = document.createElement('h2');
     heading.textContent = entry.text.title;
@@ -273,6 +328,18 @@ async function openText(entryId){
 
 function closeText(){
     if (openPanel) {
+
+        const mobile = window.matchMedia('(max-width: 768px)').matches;
+
+        if (mobile) {
+            const panelId = openPanel.querySelector('.text-panel').dataset.id;
+            const entry = entries.find(({id}) => id === panelId);
+            const audio = document.getElementById(entry.audio.src);
+            if(audio && !audio.paused){
+                audio.pause();
+            }
+        }
+
         openPanel.remove();
         openPanel = null;
         document.body.classList.remove('panel-open');

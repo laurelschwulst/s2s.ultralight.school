@@ -108,4 +108,12 @@ sup {
         max-width: 100%;
     }
 
+    .text-body {
+        line-height: 2rem;
+    }
+
+    .bio {
+        line-height: 1.6rem;
+    }
+
 }
