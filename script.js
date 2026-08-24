@@ -5,7 +5,7 @@ const icons = {
     pause: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><rect x="5" y="4" width="5" height="16"></rect><rect x="14" y="4" width="5" height="16"></rect></svg>'
 };
 
-// adding a global synchronized audio controller
+// adding a global audio controller so all UI syncs
 function syncAudio(entryId) {
     const audio = document.getElementById(
         entries.find(({id}) => id === entryId).audio.src
@@ -49,11 +49,11 @@ entries.forEach(async function (entry) {
   vessel.addEventListener('click', function () {
     const audio = document.getElementById(vessel.dataset.audio);
 
-    if (audio.paused) {
-        audio.play();
-    } else {
-        audio.pause();
-    }
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
   });
 });
 
@@ -110,10 +110,10 @@ async function createVessel(entry) {
     outline.innerHTML = await outlineshape.text();
 
     const audio = document.createElement('audio');
-    audio.src = entry.audio.src;
-    audio.id = entry.audio.src;
-    audio.classList.add('audio');
-    shape.dataset.audio = entry.audio.src;
+    audio.src = entry.audio.src;
+    audio.id = entry.audio.src;
+    audio.classList.add('audio');
+    shape.dataset.audio = entry.audio.src;
 
     audio.addEventListener('play', () => syncAudio(entry.id));
     audio.addEventListener('pause', () => syncAudio(entry.id));
