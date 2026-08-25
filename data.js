@@ -92,7 +92,8 @@ const entries = [
         author: "April Jung",
         bgColor: "#F3D27B",
         tilt: -0.5,
-        transform: 0.75
+        transform: 0.75,
+        image: "images/april.jpg"
       },
       audio: {
         src: "/audio/april.mp3"

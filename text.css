@@ -19,22 +19,22 @@ h3 {
     font-size: 1.3rem;
 }
 
-.header-image {
+.header-image, .inline-insert {
     margin-top: 40px;
     margin-bottom: 40px;
     position: relative;
 }
 
-.header-image.landscape {
+.header-image.landscape, .inline-insert.landscape {
     width: 100%;
 }
 
-.header-image.portrait {
+.header-image.portrait, .inline-insert.portrait {
     width: 480px;
     max-width: 50%;
 }
 
-.header-image::after {
+.header-image::after, .inline-insert::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -42,18 +42,25 @@ h3 {
     mix-blend-mode: multiply;
 }
 
-.header-image img {
+.header-image img, .inline-insert img {
     display: block;
     height: auto;
     filter: grayscale(1) contrast(1.5);
 }
 
-.header-image.landscape img {
+.header-image.landscape img, .inline-insert.landscape img {
     width: 100%;
 }
 
-.header-image.portrait img {
+.header-image.portrait img, .inline-insert.portrait img{
     width: 100%;
+}
+
+.caption {
+    margin-top: -20px;
+    font-style: italic;
+    font-size: .8em;
+    margin-bottom: 40px;
 }
 
 .text-body {
@@ -85,6 +92,10 @@ h3 {
     padding-bottom: 20px
 }
 
+.extra-spacing {
+    padding-top: 20px;
+}
+
 sup {
     font-size: 0.75em;
     line-height: 0;
@@ -102,8 +113,16 @@ sup {
     font-style: italic;
 }
 
-#js {
+#jianna {
     text-align: center;
+}
+
+.diamond {
+    padding-top: 80px;
+}
+
+#amy {
+    font-size: 1.1rem;
 }
 
 @media all and (max-width: 768px) {
