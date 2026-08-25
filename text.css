@@ -113,21 +113,77 @@ sup {
     font-style: italic;
 }
 
-#jianna {
+/*jianna + amy use*/
+
+.centered {
     text-align: center;
 }
+
+/* jianna */
 
 .diamond {
     padding-top: 80px;
 }
 
+/* amy - smaller font size */
 #amy {
     font-size: 1.1rem;
 }
 
+/* april */
+#chat {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 24px 0;
+}
+
+#chat p {
+    margin: 0;
+}
+
+#chat p.extra-spacing {
+    margin-top: 20px;
+}
+
+.bubble {
+    max-width: 60%;
+    width: fit-content;
+    margin: 0;
+    padding: 10px 16px;
+    border: 1.5px solid #48403D;
+    border-radius: 16px;
+    position: relative;
+}
+
+.bubble.sent {
+    align-self: flex-end;
+}
+
+.bubble.received {
+    align-self: flex-start;
+}
+
+.bubble.sent::after {
+    content: ">";
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bubble.received::before {
+    content: "<";
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
 @media all and (max-width: 768px) {
 
-    .header-image.portrait {
+    .header-image.portrait, .inline-insert.portrait {
         width: 100%;
         max-width: 100%;
     }
@@ -144,6 +200,10 @@ sup {
         transform: rotate(0deg);
         overflow-x: hidden;
         overflow-y: auto;
+    }
+
+    .bubble {
+        max-width: 88%;
     }
 
 }

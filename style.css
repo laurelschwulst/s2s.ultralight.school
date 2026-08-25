@@ -354,6 +354,7 @@ body {
     html, body {
         height: auto;
         min-height: 100dvh;
+        background: #EFE5D5;
     }
 
     body {
@@ -423,7 +424,7 @@ body {
         flex-direction: row;
         align-items: center;
         gap: 10px;
-    }
+    } 
 
     .toc-entry:hover,
     .toc-entry.highlighted,
