@@ -5,7 +5,7 @@ const icons = {
     pause: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><rect x="5" y="4" width="5" height="16"></rect><rect x="14" y="4" width="5" height="16"></rect></svg>'
 };
 
-// adding a global audio controller so all UI syncs
+//GLOBAL AUDIO CONTROLLER to sync all UI+audio
 function syncAudio(entryId) {
     const audio = document.getElementById(
         entries.find(({id}) => id === entryId).audio.src
@@ -19,7 +19,7 @@ function syncAudio(entryId) {
         vessel.classList.toggle('active', playing);
     };
 
-    // set play/pause icon in panel
+    // play/pause icon in text panels
     if (openPanel) {
         const openIcon = openPanel.querySelector(`.text-panel[data-id="${entryId}"] .panel-play-pause`);
         if(openIcon){
@@ -57,7 +57,7 @@ entries.forEach(async function (entry) {
   });
 });
 
-//moved preloading images up here
+//moved PRELOADED IMAGES up here
 const loaded = new Map();
 
 entries.forEach(function(entry) {
@@ -156,7 +156,7 @@ async function createVessel(entry) {
 
 let openPanel = null;
 
-//fetching PLAY and PAUSE all button
+//PLAY and PAUSE all button
 const button = document.getElementById('play-pause-button');
 
 button.addEventListener('click', () => {
@@ -170,7 +170,7 @@ button.addEventListener('click', () => {
     }
   });
 
-//creating TABLE OF CONTENTS
+//TABLE OF CONTENTS
 const t = [...entries].sort((a, b) => a.order - b.order);
 
 t.forEach(function (entry, i) {
@@ -193,10 +193,6 @@ function createRow(entry, index){
             icon.innerHTML = svgText;
         });
 
-    /*const img = document.createElement('img');
-    img.src = entry.vessel.outline;
-    icon.appendChild(img);*/
-
     const title = document.createElement('div');
     title.classList.add('entry-title');
     title.textContent = entry.text.title;
@@ -211,22 +207,24 @@ function createRow(entry, index){
     row.style.setProperty('--toc-translate', entry.text.transform + '%');
 
     //combined with .toc-entry:hover in style.css
-
-    row.addEventListener('mouseenter', function() {
-        row.style.paddingBottom = 'calc(4.3rem + 100px)';
-        row.style.marginBottom = '-100px'
-    })
-    
-    row.addEventListener('mouseleave', function() {
-        row.style.paddingBottom = '';
-        row.style.marginBottom = '';
-    })
+    //matchMedia added to avoid extra whitespace on mobile
+    if (window.matchMedia('(hover: hover)').matches) {
+        row.addEventListener('mouseenter', function() {
+            row.style.paddingBottom = 'calc(4.3rem + 100px)';
+            row.style.marginBottom = '-100px'
+        })
+        
+        row.addEventListener('mouseleave', function() {
+            row.style.paddingBottom = '';
+            row.style.marginBottom = '';
+        })
+    }
 
     return row;
 
 }
 
-//opening text panels
+//TEXT PANELS
 
 async function openText(entryId, autoplayOK = true){
     closeText();
@@ -299,6 +297,7 @@ async function openText(entryId, autoplayOK = true){
         image.classList.add('header-image');
         panel.appendChild(image);
 
+        //from preloaded images
         loaded.get(entry.id).then(function(result){
             image.classList.add(result.orientation);
             
@@ -360,6 +359,7 @@ addEventListener("load", function() {
     toggle(false);
 })
 
+// COLOPHON
 // separate function for colophon which doesn't open from data.js! (file is text/colophon.html)
 
 async function openColophon(){
@@ -408,6 +408,8 @@ async function openColophon(){
     }
     openPanel = overlay;
 }
+
+//HASH
 
 function toggle(autoplayOK) {
     const match = document.URL.match(/#(.*)/)

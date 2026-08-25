@@ -197,7 +197,7 @@ sup {
     }
 
     .colophon {
-        transform: rotate(0deg);
+        transform: none;
         overflow-x: hidden;
         overflow-y: auto;
     }
