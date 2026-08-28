@@ -113,6 +113,7 @@ async function createVessel(entry) {
     audio.src = entry.audio.src;
     audio.id = entry.audio.src;
     audio.classList.add('audio');
+    audio.loop = true;
     shape.dataset.audio = entry.audio.src;
 
     audio.addEventListener('play', () => syncAudio(entry.id));

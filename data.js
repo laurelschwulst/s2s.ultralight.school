@@ -180,8 +180,8 @@ const entries = [
       vessel: {
         outline: "/vessels/outline/Lisa.svg",
         fill: "/vessels/fill/Lisa.svg",
-        x: 20, y: 68,
-        width: 160,
+        x: 20, y: 66,
+        width: 152,
         fillColor: "#F3D27B",
         tilt: 8
       },
