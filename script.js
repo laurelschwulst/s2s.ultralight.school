@@ -75,6 +75,7 @@ entries.forEach(function(entry) {
 
             resolve({
                 src: entry.text.image,
+                alt: entry.text.alt,
                 orientation: orientation
             })
         }
@@ -304,7 +305,7 @@ async function openText(entryId, autoplayOK = true){
             
             const img = document.createElement('img');
             img.src = result.src;
-            img.alt = ''; // ADD IN ALT TEXT HERE FROM DATA JS LATER
+            img.alt = result.alt;
             image.appendChild(img);
         })
     }

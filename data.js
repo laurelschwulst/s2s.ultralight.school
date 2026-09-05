@@ -18,7 +18,8 @@ const entries = [
         bgColor: "#A7C2D5",
         tilt: 1.25,
         transform: 0.5,
-        image: "/images/amy.jpg"
+        image: "/images/amy.jpg",
+        alt: "A graphite sketch with energetic lines coalesce into what almost looks like a landscape. Abstractions give way to grasses, plants, pathways, and other organic forms. The lines are like spiders’ silk or the wisps of hair at the end of one’s neck."
       },
       audio: {
         src: "/audio/amy.mp3"
@@ -43,7 +44,8 @@ const entries = [
         bgColor: "#E07A6A",
         tilt: -2.5,
         transform: 1.75,
-        image: "/images/angie.jpg"
+        image: "/images/angie.jpg",
+        alt: "White wisped forms vining against a black surface, heavily weighted and frenetic in the lower foreground, while more sprase in the upper third."
       },
       audio: {
         src: "/audio/angie.mp3"
@@ -68,7 +70,8 @@ const entries = [
         bgColor: "#B1B753",
         tilt: -1.25,
         transform: 1.75,
-        image: "/images/anna.jpg"
+        image: "/images/anna.jpg",
+        alt: "A painting shows a domestic space. In the foreground is a table covered with the paper, coffee cups, and a potted plant. In the background there's a bed with pictures on the wall behind it, and overhead a clothesline with two items of clothing hanging from it."
       },
       audio: {
         src: "/audio/anna.mp3"
@@ -93,7 +96,8 @@ const entries = [
         bgColor: "#F3D27B",
         tilt: -0.5,
         transform: 0.75,
-        image: "images/april.jpg"
+        image: "images/april.jpg",
+        alt: "A person sits in contemplation on a white couch, next to a tree-like floor lamp with hanging baskets, looking out an overexposed window."
       },
       audio: {
         src: "/audio/april.mp3"
@@ -118,7 +122,8 @@ const entries = [
         bgColor: "#B1B753",
         tilt: 1.1,
         transform: 0,
-        image: "/images/helena.jpeg"
+        image: "/images/helena.jpeg",
+        alt: "A peaceful clearing of moss, alive and green, leads to a tall tree whose branches and leaves are out of frame. Hugged by the dense forest lush."
       },
       audio: {
         src: "/audio/helena.mp3"
@@ -143,7 +148,8 @@ const entries = [
         bgColor: "#BEDBC9",
         tilt: 1.75,
         transform: 0.75,
-        image: "/images/jianna.jpg"
+        image: "/images/jianna.jpg",
+        alt: "The setting sun hides behind a tall cloud system as its golden rays radiate from an opening. Below, the ocean recedes into the horizon, soft ripples reflecting the sunset."
       },
       audio: {
         src: "/audio/jianna.mp3"
@@ -168,7 +174,8 @@ const entries = [
         bgColor: "#BEDBC9",
         tilt: -1,
         transform: 1,
-        image: "/images/leah.jpg"
+        image: "/images/leah.jpg",
+        alt: "A flash-lit clearing on the forest floor at night. A speckled blue stone rests against a fallen log next to a small fir. A patch of green with tiny purple flowers appears in the middle of the mud and dirt. Edges fade to black."
       },
       audio: {
         src: "/audio/leah.mp3"
@@ -193,7 +200,8 @@ const entries = [
         bgColor: "#F3D27B",
         tilt: 2.1,
         transform: 0.5,
-        image: "/images/lisa.jpg"
+        image: "/images/lisa.jpg",
+        alt: "A silver bowl with a spoon for stirring holds bright yellow pluverized corn kernels and its juices. A hand holds the leftover naked cob above."
       },
       audio: {
         src: "/audio/lisa.mp3"
@@ -242,7 +250,8 @@ const entries = [
         bgColor: "#CEC0A3",
         tilt: 2,
         transform: 1.75,
-        image: "/images/liza.jpg"
+        image: "/images/liza.jpg",
+        alt: "A diptych: On the left is a partly cloudy radiant blue sky. On the right, a chickadee perches atop a thin wiry fence against a dull concrete backdrop. Her face focused on something just out of frame."
       },
       audio: {
         src: "/audio/liza.mp3"
@@ -291,7 +300,8 @@ const entries = [
         bgColor: "#CEC0A3",
         tilt: -1.5,
         transform: 0.5,
-        image: "/images/nicci.jpg"
+        image: "/images/nicci.jpg",
+        alt: "An index finger presses into a phone screen, leaving a smudge and a tear in the screen. Icons at the top and bottom of the screen are mirrored."
       },
       audio: {
         src: "/audio/nicci.mp3"
@@ -316,7 +326,8 @@ const entries = [
         bgColor: "#E07A6A",
         tilt: 0.5,
         transform: 0,
-        image: "/images/sarah.jpg"
+        image: "/images/sarah.jpg",
+        alt: "Two greens speak to one another: a verdant juice in a glass cup punctuated by a black straw, teeth marks chewed on the end, and a half-eaten piece of avocado toast held by a hand with a bandaided finger. A charger cable enters and leaves the left side of the photo."
       },
       audio: {
         src: "/audio/sarah.mp3"
@@ -341,7 +352,8 @@ const entries = [
         bgColor: "#92B191",
         tilt: -1,
         transform: 0.75,
-        image: "/images/vyanka.jpg"
+        image: "/images/vyanka.jpg",
+        alt: "A photograph of friends dispersing and mingling after a meal around a long communal table outdoors on a small lawn."
       },
       audio: {
         src: "/audio/vyanka.mp3"
@@ -366,7 +378,8 @@ const entries = [
         bgColor: "#92B191",
         tilt: -2.25,
         transform: 1,
-        image: "/images/yo-yo.jpg"
+        image: "/images/yo-yo.jpg",
+        alt: "A person in a white fuzzy tanktop lies sideways, close to the camera with their eyes closed and smiling. Behind them, green grass stretches to a metal railing, then sunlit trees, a curved stadium roof, and lush mountains in the distance."
       },
       audio: {
         src: "/audio/yoyo.mp3"
