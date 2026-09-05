@@ -97,7 +97,7 @@ const entries = [
         tilt: -0.5,
         transform: 0.75,
         image: "images/april.jpg",
-        alt: "A person sits in contemplation on a white couch, next to a tree-like floor lamp with hanging baskets, looking out an overexposed window."
+        alt: "A person in a black shirt and white skirt sits in contemplation on a flat, white couch, next to a floor lamp with baskets hanging off its branches, looking out an overexposed window."
       },
       audio: {
         src: "/audio/april.mp3"
