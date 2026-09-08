@@ -312,7 +312,9 @@ body {
     z-index: 8;
 }
 
-#purchase a {
+#purchase-desktop-inner {
+    transition: transform 0.25s ease;
+    transform: rotate(-15deg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -333,16 +335,13 @@ body {
 #purchase a, #purchase a:visited {
     color: #48403D;
     text-decoration: none;
-    transition: transform 0.25s ease;
-    transform: rotate(-15deg);
 }
 
-#purchase a:hover, #purchase a:active {
+#purchase a:hover #purchase-desktop-inner, #purchase a:active #purchase-desktop-inner {
     text-decoration: none;
     border-bottom: none;
     padding-bottom: 1px;
-    transform: rotate(0deg);
-    transform: translateX(-50px);
+    transform: rotate(0deg) translateX(-60px);
 }
 
 #mobile-footer {
