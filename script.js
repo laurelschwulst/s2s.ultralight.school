@@ -210,7 +210,7 @@ function createRow(entry, index){
 
     //combined with .toc-entry:hover in style.css
     //matchMedia added to avoid extra whitespace on mobile
-    if (window.matchMedia('(hover: hover)').matches) {
+    if (window.matchMedia('(hover: hover)').matches && index != t.length - 1) {
         row.addEventListener('mouseenter', function() {
             row.style.paddingBottom = 'calc(4.3rem + 100px)';
             row.style.marginBottom = '-100px'

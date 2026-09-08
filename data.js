@@ -16,7 +16,7 @@ const entries = [
         body: "/text/amy.html",
         author: "Amy Fang",
         bgColor: "#A7C2D5",
-        tilt: 1.25,
+        tilt: 0.25,
         transform: 0.5,
         image: "/images/amy.jpg",
         alt: "A graphite sketch with energetic lines coalesce into what almost looks like a landscape. Abstractions give way to grasses, plants, pathways, and other organic forms. Echoing the text, the lines are “whispering threads” and “slender markings,” like spiders’ silk or the wisps of hair at the end of one’s neck."
