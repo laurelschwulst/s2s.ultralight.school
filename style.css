@@ -38,6 +38,7 @@ body {
     position: fixed;
     z-index: 10;
     display: block;
+    transition: transform 0.25s ease;
 }
 
 #logo-desktop img {
@@ -47,7 +48,6 @@ body {
 
 #logo-desktop:hover {
     transform: rotate(12deg);
-    transition: transform 0.25s ease;
 }
 
 /* vessel section */
