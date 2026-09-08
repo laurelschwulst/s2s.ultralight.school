@@ -334,16 +334,12 @@ async function openText(entryId, autoplayOK = true){
 function closeText(){
     if (openPanel) {
 
-        const mobile = window.matchMedia('(max-width: 768px)').matches;
-
-        if (mobile) {
-            const panelId = openPanel.querySelector('.text-panel').dataset.id;
-            const entry = entries.find(({id}) => id === panelId);
-            if(entry) {
-                const audio = document.getElementById(entry.audio.src);
-                if(audio && !audio.paused){
-                    audio.pause();
-                }
+        const panelId = openPanel.querySelector('.text-panel').dataset.id;
+        const entry = entries.find(({id}) => id === panelId);
+        if(entry) {
+            const audio = document.getElementById(entry.audio.src);
+            if(audio && !audio.paused){
+                audio.pause();
             }
         }
 

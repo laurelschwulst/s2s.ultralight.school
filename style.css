@@ -33,20 +33,21 @@ body {
 }
 
 #logo-desktop {
-    top: 30px;
-    left: 30px;
+    top: 20px;
+    left: 20px;
     position: fixed;
     z-index: 10;
     display: block;
 }
 
 #logo-desktop img {
-    width: 60px;
+    width: 50px;
     height: auto;
 }
 
 #logo-desktop:hover {
-    opacity: .7;
+    transform: rotate(12deg);
+    transition: transform 0.25s ease;
 }
 
 /* vessel section */
@@ -306,8 +307,8 @@ body {
 
 #purchase {
     position: fixed;
-    left: 30px;
-    bottom: 30px;
+    right: -10px;
+    bottom: 20%;
     z-index: 8;
 }
 
@@ -315,33 +316,33 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 #purchase img {
-    width: 80px;
+    width: 120px;
     height: auto;
-    transform: rotate(-10deg);
     text-decoration: none;
     border-bottom: none;
 }
 
 #purchase:hover img {
-    transform: rotate(5deg);
     cursor: pointer;
 }
 
 #purchase a, #purchase a:visited {
     color: #48403D;
     text-decoration: none;
-    border-bottom: 1px dashed #48403d;
+    transition: transform 0.25s ease;
+    transform: rotate(-15deg);
 }
 
 #purchase a:hover, #purchase a:active {
-    opacity: .7;
     text-decoration: none;
     border-bottom: none;
     padding-bottom: 1px;
+    transform: rotate(0deg);
+    transform: translateX(-50px);
 }
 
 #mobile-footer {

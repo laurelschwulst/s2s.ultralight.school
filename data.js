@@ -19,7 +19,7 @@ const entries = [
         tilt: 1.25,
         transform: 0.5,
         image: "/images/amy.jpg",
-        alt: "A graphite sketch with energetic lines coalesce into what almost looks like a landscape. Abstractions give way to grasses, plants, pathways, and other organic forms. The lines are like spiders’ silk or the wisps of hair at the end of one’s neck."
+        alt: "A graphite sketch with energetic lines coalesce into what almost looks like a landscape. Abstractions give way to grasses, plants, pathways, and other organic forms. Echoing the text, the lines are “whispering threads” and “slender markings,” like spiders’ silk or the wisps of hair at the end of one’s neck."
       },
       audio: {
         src: "/audio/amy.mp3"
@@ -251,7 +251,7 @@ const entries = [
         tilt: 2,
         transform: 1.75,
         image: "/images/liza.jpg",
-        alt: "A diptych: On the left is a partly cloudy radiant blue sky. On the right, a chickadee perches atop a thin wiry fence against a dull concrete backdrop. Her face focused on something just out of frame."
+        alt: "A diptych of photographs. On the left is a partly cloudy radiant blue sky. On the right, a chickadee perches atop a thin wiry fence against a dull concrete backdrop. Her face focused on something just out of frame."
       },
       audio: {
         src: "/audio/liza.mp3"
