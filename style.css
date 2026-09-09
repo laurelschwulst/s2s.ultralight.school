@@ -429,7 +429,8 @@ body {
 
     .toc-entry:hover,
     .toc-entry.highlighted,
-    .toc-entry:first-of-type:hover {
+    .toc-entry:first-of-type:hover,
+    .toc-entry:last-of-type:hover {
         width: 100%;
         transform: rotate(var(--toc-tilt, 0deg));
 }
